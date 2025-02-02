@@ -10,7 +10,7 @@ gitrepo = "https://github.com/QEXLAUWASD/AKIUpdater.git"
 if __name__ == "__main__":
     # from google drive download the client zip file and extract it to the same directory(url https://drive.google.com/file/d/1INa9wAych3lDnQAYX5pkif74KZxP1mvD/view?usp=sharing)
     # check if the file not exists
-    if not os.path.exists("client.zip"):
+    if not os.path.exists("client.zip") and not os.path.exists("EscapeFromTarkov_Data"):
         print("Downloading the client")
         gdown.download("https://drive.google.com/uc?id=1INa9wAych3lDnQAYX5pkif74KZxP1mvD", "client.zip", quiet=False)
         print("Downloaded the client")
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     
     # install SP-Tarkov Server from google drive(url https://drive.google.com/file/d/1jJNh9L2dQsI7dy0F3jB0yKUrdU4qvyuo/view?usp=drive_link)
     # check if the file not exists
-    if not os.path.exists("Server.zip"):
+    if not os.path.exists("Server.zip") and not os.path.exists("SPT.Launcher.exe"):
         print("Downloading the server")
         gdown.download("https://drive.google.com/uc?id=1jJNh9L2dQsI7dy0F3jB0yKUrdU4qvyuo", "Server.zip", quiet=False)
         print("Downloaded the server")
